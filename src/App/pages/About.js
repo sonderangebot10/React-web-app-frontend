@@ -12,10 +12,9 @@ class About extends Component {
           <hr />
           Technologies used:
           <ul>
-            <li>ReactJs</li>
+            <li>React</li>
             <li>NodeJs</li>
             <li>Express</li>
-            <li>Bootstrap</li>
             <li>MaterialUI</li>
           </ul>
         </div>
