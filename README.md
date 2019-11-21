@@ -1,7 +1,5 @@
 Simple React Web App with private routes and json data fetch mock. Responsive and adaptive web design - React, Express, Bootstrap and Material UI.
 
-Simple login system and communication with backend (NodeJs).
-
 <img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/1-desk.png"/>
 <img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/2-desk.png"/>
 <img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/3-desk.png"/>
