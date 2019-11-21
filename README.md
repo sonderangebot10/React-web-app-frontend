@@ -1,6 +1,4 @@
-React web app test.
-
-Responsive and adaptive web design text - react, bootstrap and material ui.
+Simple React Web App with private routes and json data fetch mock. Responsive and adaptive web design - React, Express, Bootstrap and Material UI.
 
 Simple login system and communication with backend (NodeJs).
 
