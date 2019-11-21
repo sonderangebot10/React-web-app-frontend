@@ -4,9 +4,7 @@ Simple React Web App with private routes and json data fetch mock. Responsive an
 <img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/2-desk.png"/>
 <img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/3-desk.png"/>
 
-<img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/1-mob.png" alt="Your image title" width="250"/>
-<img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/2-mob.png" alt="Your image title" width="250"/>
-<img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/3-mob.png" alt="Your image title" width="250"/>
+<img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/1-mob.png" alt="Your image title" width="250"/><img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/2-mob.png" alt="Your image title" width="250"/><img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/3-mob.png" alt="Your image title" width="250"/>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
