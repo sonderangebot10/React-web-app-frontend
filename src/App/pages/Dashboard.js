@@ -85,8 +85,10 @@ class Heater extends Component {
   }
 
   changeTemp = (event, newValue) => {
-    fetch('/api/changeTemp/?room=' + this.props.room.room_num + '&device=' + this.props.device_num.device_num + '&value=' + newValue);
-    this.setState({temperature: newValue});
+    fetch('/api/changeTemp/?room=' + this.props.room.room_num + '&device=' + this.props.device_num.device_num + '&value=' + newValue).
+    then(res=> {
+      this.setState({temperature: newValue});
+    });
   };
 
   render(){
