@@ -36,8 +36,14 @@ class Edit extends Component {
     });
   }
 
+  addRoom = () => {
+    fetch('/api/addRoom/?room_name=' + this.state.room_name)
+    .then(res => this.getItems());
+  }
+
   render() {
-    const { list } = this.state;          
+    const { list } = this.state;    
+    let room = -1;      
     return (
         <div className="edit">
           <h3>Edit Devices</h3>
@@ -47,6 +53,7 @@ class Edit extends Component {
             <div>
             {/* printing rooms */}
             {list.map((item) => {
+              room++;
               return(
                 <div style={{paddingBottom: 20}}>
                 <h4 >{item.room}</h4>
@@ -55,16 +62,18 @@ class Edit extends Component {
                     if(device.type == 'heater' || 'light') return OldDevice(device);
                     return(DeviceError(device));
                 })}
-                <NewDevice />
+                <NewDevice room={{room}} refresh={this.getItems}/>
                 </div>
               );
             })}
             <div>
             <TextField style={{marginBottom: 10}}
-          id="standard-basic"
-          label="Add room"/>
+              id="standard-basic"
+              label="Add room"
+              value={this.state.room_name}
+              onChange={e => this.setState({ room_name: e.target.value })}/>
             </div>
-            <Button variant="contained" color="secondary" >
+            <Button variant="contained" color="secondary" onClick={this.addRoom} >
               Add
             </Button>
             </div>
@@ -76,12 +85,13 @@ class Edit extends Component {
   }
 }
 
-function NewDevice() {
-  const [age, setAge] = React.useState('');
+function NewDevice(props) {
+  const [device_type, setDevice_type] = React.useState('');
+  const [device_name, setDevice_name] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
   const handleChange = event => {
-    setAge(event.target.value);
+    setDevice_type(event.target.value);
   };
 
   const handleClose = () => {
@@ -91,6 +101,11 @@ function NewDevice() {
   const handleOpen = () => {
     setOpen(true);
   };
+
+  const addDevice = () => {
+    fetch('/api/addDevice/?room=' + props.room.room + '&type=' + device_type + '&name=' + device_name)
+    .then(res => props.refresh());
+  }
 
   return (
   <ExpansionPanel style={{marginBottom: 10}}>
@@ -109,7 +124,7 @@ function NewDevice() {
         open={open}
         onClose={handleClose}
         onOpen={handleOpen}
-        value={age}
+        value={device_type}
         onChange={handleChange}>
         <MenuItem value={10}>Heater</MenuItem>
         <MenuItem value={20}>Light</MenuItem>
@@ -118,13 +133,14 @@ function NewDevice() {
       <div></div>
       <TextField style={{marginBottom: 10}}
         id="standard-basic"
-        label="Device name"/>
+        label="Device name"
+        onChange={e => setDevice_name(e.target.value)}/>
         <div></div>
       <TextField style={{marginBottom: 10}}
         id="standard-basic"
         label="Endpoint url"/>
       <div>
-      <Button variant="contained" color="secondary" >
+      <Button variant="contained" color="secondary" onClick={addDevice}>
         Save
       </Button>
       </div>

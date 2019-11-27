@@ -144,7 +144,7 @@ class Heater extends Component {
 
   render() {
   return (
-  <div>
+  <div style={{marginBottom: 20}}>
       <PopupState variant="popover" popupId="demo-popup-popover">
       {popupState => (
         <div>
