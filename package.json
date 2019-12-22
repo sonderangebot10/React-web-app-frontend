@@ -39,6 +39,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://35.228.126.12:5000",
+  "proxy": "https://homeswitch-262815.appspot.com",
   "proxy1": "http://localhost:5000"
 }
