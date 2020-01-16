@@ -5,7 +5,3 @@ Simple React Web App with private routes and json data fetch mock. Responsive an
 Currently backend is running on google compute - change proxy to localhost in package.json otherwise.
 
 <img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/1-mob.png" alt="Your image title" width="250"/><img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/2-mob.png" alt="Your image title" width="250"/><img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/3-mob.png" alt="Your image title" width="250"/>
-
-<img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/1-desk.png"/>
-<img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/2-desk.png"/>
-<img src="https://github.com/sonderangebot10/React-web-app-frontend/blob/master/screenshots/3-desk.png"/>
